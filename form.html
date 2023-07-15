@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Form</title>
+</head>
+<body>
+    <div class="all-form">
+        <div class="title-img"><i class="fas fa-om"></i></div>
+        <h2 id="org">राष्ट्रीय स्वयंसेवक संघ</h2>
+        <p id = "description">विसतृत सूचि विवरण प्रपत्र </p>
+        <form action="_blank" ></form>
+        <form id="soochi-form" action="_blank" class="bottom-form">
+            <fieldset id="personal-details" class="personal-details">
+                <legend>व्यक्तिगत विवरण</legend>
+                <label id ="name-label">नाम : <input  placeholder="स्वयंसेवक का पूरा नाम" id="name" type="text" required></label> 
+                <label id="dob-label">जन्म तिथि :<input placeholder="Date" id="date" type="date" required></label>
+                <label  id="study-buis">कक्षा / व्यवसाय : <input type="text" id="study" required placeholder="आपकी कक्षा / आपका व्यवसाय"></label>
+            </fieldset>
+            <br>
+            <fieldset id="contack-details" class="contact-details">
+                <legend>सम्पर्क करने का विवरण</legend>
+                <label id="email-label">स्वयंसेवक का ई-मेल : <input class="input-box" id="email" placeholder="ई-मेल" type="email" required></label>
+                <label id="number-label">चल-दूरभाष : <input class="input-box" id="number" placeholder="व्यक्तिगत चल-दूरभाष नं." type="number" min="1000000000" max="9999999999" required></label>
+                <label id="add-number">अतिरिक्त चल-दूरभाष :<input class="input-box" placeholder="चल-दूरभाष नं." type="number" id="add-number" min="1000000000" max="9999999999"></label>
+            </fieldset>
+            <br>
+            <fieldset id="address-details" class="address-details">
+                <legend>पते का विवरण</legend>
+                <label id="add-label"><input class="input-box" placeholder="मकान नं. " id="add" type="text" required></label>
+                <label id="add-label"><input class="input-box" placeholder="कॉलोनी" id="add" type="text" required></label>
+                <label id="add-label"><input class="input-box" placeholder="क्षेत्र या नगर" id="add" type="text" required></label>
+                <label id="add-label"><input class="input-box" placeholder="शहर" id="add" type="text" required></label>
+                <label id="add-label"><input class="input-box" placeholder="ज़िला" id="add" type="text" required></label>
+                <label id="add-label"><input class="input-box" placeholder="राज्य" id="add" type="text" required></label>
+                <label id="add-label"><input class="input-box" placeholder="पिन कोड" id="add" type="number" min="301001" max="345034" required></label>
+            </fieldset>
+            <br>
+            <fieldset id="info" class="info">
+                <legend>संघ की जानकारी</legend>
+                    <label id="info">शिक्षित : <input id="yes" onclick="showHide()" type="radio" name="camp" value="yes"> हाँ  <input id="no" onclick="showHide()" type="radio" name="camp" value="no"> नही </label>
+                    <br>
+                    <label id="camp">संघ का शिक्षण : 
+                        <select name="info" id="dropdown" style="min-width: 180px" required>
+                            <option value="">कोई एक चयन कीजिये</option>
+                            <option value="basic">प्राथमिक वर्ग शिक्षित</option>
+                            <option value="first-year">प्रथम वर्ष शिक्षित</option>
+                            <option value="second-year">द्वितीय वर्ष शिक्षित</option>
+                            <option value="third-year">तृतीय वर्ष शिक्षित</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label id="year">शिक्षण का वर्ष : <input class="input-box" type="number" min="1925" required></label>
+                    <br>
+                    <label id="info">वर्तमान दायित्व : <input class="input-box" type="text" placeholder="स्वयंसेवक का दायित्व" required></label>
+                    <label id="info">संघ प्रवेश: <input type="number" min="0" max="100" required> वर्ष पूर्व</label>
+                    <br>
+                    <label id="info">प्रतिज्ञित: <input type="radio" name="pledged" value="yes" required> हाँ  <input type="radio" name="pledged" value="no" required> नही </label>
+                    <label id="info">घोष वर्ग शिक्षित : <input class="inline" type="radio" name="info" value="yes" required> हाँ  <input type="radio" class="inline" name="info" value="no" required> नही </label>
+                    <label id="info">वाद्य : 
+                        <select name="ghosh" id="info" required>
+                            <option value="no">कोई वाद्य नही</option>
+                            <option value="drum">आनक</option>
+                            <option value="vigul">शंख</option>
+                            <option value="base-drum">पणव</option>
+                            <option value="flute">वंशी/ वेणु</option>
+                            <option value="horns">श्रंग</option>
+                            <option value="no">ताल वाद्य</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label class="another-info" id="info">किसी सामाजिक/विविध संगठन में दायित्व :  <input type="text" placeholder="संगठन का नाम"> <input type="text" placeholder="संगठन में दायित्व"></label>
+            </fieldset>
+            <br>
+            <input type="submit" id="submit" value="Submit" />
+        </form>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
